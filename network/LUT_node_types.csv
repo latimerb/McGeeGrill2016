@@ -1,0 +1,8 @@
+node_type_id model_template pop_name morphology model_type
+100 hoc:LIF PUDaff  biophysical
+101 hoc:LIF Pelaff  biophysical
+102 hoc:LIF INmplus  biophysical
+103 hoc:LIF INmminus  biophysical
+104 hoc:LIF IND  biophysical
+105 hoc:LIF FB  biophysical
+106 hoc:LIF SPN  biophysical

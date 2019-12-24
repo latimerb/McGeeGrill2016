@@ -1,0 +1,73 @@
+{
+  "target_simulator": "NEURON",
+  "run": {
+    "nsteps_block": 10000,
+    "tstop": 1000.0,
+    "dt": 0.1,
+    "dL": 9999,
+    "spike_threshold": -50.0
+  },
+  "conditions": {
+    "celsius": 34.0,
+    "v_init": -65.0
+  },
+  "inputs": {
+    "INPUT_spikes": {
+      "input_type": "spikes",
+      "module": "sonata",
+      "input_file": "./PUD_spikes.h5",
+      "node_set": "INPUT"
+    }
+  },
+  "output": {
+    "spikes_file_csv": "spikes.csv",
+    "spikes_file": "spikes.h5",
+    "log_file": "log.txt",
+    "output_dir": "./output",
+    "overwrite_output_dir": true
+  },
+  "reports": {
+    "membrane_report": {
+      "module": "membrane_report",
+      "cells": "all",
+      "variable_name": [
+        "v"
+      ],
+      "file_name": "cell_vars.h5"
+    }
+  },
+  "network": "./circuit_config.json",
+  "config_path": "/home/mizzou/McGeeGrill2016/simulation_configSIMPLE.json",
+  "config_dir": "/home/mizzou/McGeeGrill2016",
+  "components": {
+    "biophysical_neuron_models_dir": "/home/mizzou/McGeeGrill2016/components/biophysical_neuron_models",
+    "__pycache___dir": "/home/mizzou/McGeeGrill2016/components/__pycache__",
+    "point_neuron_models_dir": "/home/mizzou/McGeeGrill2016/components/point_neuron_models",
+    "templates_dir": "/home/mizzou/McGeeGrill2016/components/templates",
+    "synaptic_models_dir": "/home/mizzou/McGeeGrill2016/components/synaptic_models",
+    "morphologies_dir": "/home/mizzou/McGeeGrill2016/components/morphologies",
+    "mechanisms_dir": "/home/mizzou/McGeeGrill2016/components/mechanisms"
+  },
+  "networks": {
+    "nodes": [
+      {
+        "node_types_file": "/home/mizzou/McGeeGrill2016/network/LUT_node_types.csv",
+        "nodes_file": "/home/mizzou/McGeeGrill2016/network/LUT_nodes.h5"
+      },
+      {
+        "nodes_file": "/home/mizzou/McGeeGrill2016/network/INPUT_nodes.h5",
+        "node_types_file": "/home/mizzou/McGeeGrill2016/network/INPUT_node_types.csv"
+      }
+    ],
+    "edges": [
+      {
+        "edge_types_file": "/home/mizzou/McGeeGrill2016/network/INPUT_LUT_edge_types.csv",
+        "edges_file": "/home/mizzou/McGeeGrill2016/network/INPUT_LUT_edges.h5"
+      },
+      {
+        "edges_file": "/home/mizzou/McGeeGrill2016/network/LUT_LUT_edges.h5",
+        "edge_types_file": "/home/mizzou/McGeeGrill2016/network/LUT_LUT_edge_types.csv"
+      }
+    ]
+  }
+}

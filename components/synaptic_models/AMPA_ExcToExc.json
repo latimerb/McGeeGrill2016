@@ -1,0 +1,6 @@
+{
+  "level_of_detail": "exp2syn",
+  "tau1": 0.9,
+  "tau2": 12.15,
+  "erev": 0.0
+}

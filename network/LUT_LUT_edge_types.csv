@@ -1,0 +1,12 @@
+edge_type_id target_query source_query model_template delay distance_range dynamics_params target_sections syn_weight
+100 pop_name=='INmminus' pop_name=='PUDaff' Exp2Syn 1.0 "[0.0, 300.0]" AMPA_ExcToExc.json ['somatic'] 0.07
+101 pop_name=='INmplus' pop_name=='PUDaff' Exp2Syn 1.0 "[0.0, 300.0]" AMPA_ExcToExc.json ['somatic'] 0.044
+102 pop_name=='IND' pop_name=='PUDaff' Exp2Syn 1.0 "[0.0, 300.0]" AMPA_ExcToExc.json ['somatic'] 0.06
+103 pop_name=='IND' pop_name=='Pelaff' Exp2Syn 1.0 "[0.0, 300.0]" AMPA_ExcToExc.json ['somatic'] 0.045
+104 pop_name=='SPN' pop_name=='INmminus' Exp2Syn 1.0 "[0.0, 300.0]" GABA_InhToExc.json ['somatic'] 0.065
+105 pop_name=='SPN' pop_name=='INmplus' Exp2Syn 1.0 "[0.0, 300.0]" AMPA_ExcToExc.json ['somatic'] 0.06
+106 pop_name=='SPN' pop_name=='IND' Exp2Syn 1.0 "[0.0, 300.0]" AMPA_ExcToExc.json ['somatic'] 0.08
+107 pop_name=='IND' pop_name=='FB' Exp2Syn 1.0 "[0.0, 300.0]" AMPA_ExcToExc.json ['somatic'] 0.06
+108 pop_name=='IND' pop_name=='FB' Exp2Syn 1.0 "[0.0, 300.0]" AMPA_ExcToExc.json ['somatic'] 0.001
+109 pop_name=='FB' pop_name=='SPN' Exp2Syn 1.0 "[0.0, 300.0]" AMPA_ExcToExc.json ['somatic'] 0.001
+110 pop_name=='IND' pop_name=='PMC' Exp2Syn 1.0 "[0.0, 300.0]" AMPA_ExcToExc.json ['somatic'] 0.033

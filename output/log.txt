@@ -1,0 +1,9 @@
+2019-12-24 13:32:05,751 [INFO] Created log file
+2019-12-24 13:32:05,986 [INFO] Building cells.
+2019-12-24 13:32:06,008 [INFO] Building recurrent connections
+2019-12-24 13:32:06,043 [INFO] Building virtual cell stimulations for INPUT_spikes
+2019-12-24 13:32:06,092 [INFO] Running simulation for 1000.000 ms with the time step 0.100 ms
+2019-12-24 13:32:06,093 [INFO] Starting timestep: 0 at t_sim: 0.000 ms
+2019-12-24 13:32:06,093 [INFO] Block save every 10000 steps
+2019-12-24 13:32:07,947 [INFO]     step:10000 t_sim:1000.00 ms
+2019-12-24 13:32:08,200 [INFO] Simulation completed in 2.107 seconds 
