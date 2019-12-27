@@ -120,11 +120,11 @@ extern void hoc_reg_nmodl_filename(int, const char*);
 #define grefrac grefrac_SpikeOut
  double grefrac = 100;
 #define refrac refrac_SpikeOut
- double refrac = 2;
+ double refrac = 1;
 #define thresh thresh_SpikeOut
  double thresh = -50;
 #define vrefrac vrefrac_SpikeOut
- double vrefrac = -70;
+ double vrefrac = -65;
  /* some parameters have upper and lower limits */
  static HocParmLimits _hoc_parm_limits[] = {
  0,0,0
@@ -403,8 +403,8 @@ static const char* nmodl_file_text =
   "\n"
   "PARAMETER {\n"
   "	thresh = -50 (millivolt)\n"
-  "	refrac = 2 (ms)\n"
-  "	vrefrac = -70 (millivolt)\n"
+  "	refrac = 1 (ms)\n"
+  "	vrefrac = -65 (millivolt)\n"
   "	grefrac = 100 (microsiemens) :clamp to vrefrac\n"
   "}\n"
   "\n"
@@ -422,6 +422,7 @@ static const char* nmodl_file_text =
   "BREAKPOINT {\n"
   "	i = g*(v - vrefrac)\n"
   "}\n"
+  "\n"
   "\n"
   "NET_RECEIVE(w) {\n"
   "	if (flag == 1) {\n"

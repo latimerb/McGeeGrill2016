@@ -7,6 +7,7 @@ extern void _CaDynamics_reg(void);
 extern void _Ca_HVA_reg(void);
 extern void _Ca_LVA_reg(void);
 extern void _Ih_reg(void);
+extern void _ikca_reg(void);
 extern void _Im_reg(void);
 extern void _Im_v2_reg(void);
 extern void _Kd_reg(void);
@@ -19,6 +20,7 @@ extern void _Nap_reg(void);
 extern void _NaTa_reg(void);
 extern void _NaTs_reg(void);
 extern void _NaV_reg(void);
+extern void _sahp_reg(void);
 extern void _SK_reg(void);
 extern void _spikeout_reg(void);
 extern void _vecevent_reg(void);
@@ -31,6 +33,7 @@ void modl_reg(){
     fprintf(stderr," modfiles//Ca_HVA.mod");
     fprintf(stderr," modfiles//Ca_LVA.mod");
     fprintf(stderr," modfiles//Ih.mod");
+    fprintf(stderr," modfiles//ikca.mod");
     fprintf(stderr," modfiles//Im.mod");
     fprintf(stderr," modfiles//Im_v2.mod");
     fprintf(stderr," modfiles//Kd.mod");
@@ -43,6 +46,7 @@ void modl_reg(){
     fprintf(stderr," modfiles//NaTa.mod");
     fprintf(stderr," modfiles//NaTs.mod");
     fprintf(stderr," modfiles//NaV.mod");
+    fprintf(stderr," modfiles//sahp.mod");
     fprintf(stderr," modfiles//SK.mod");
     fprintf(stderr," modfiles//spikeout.mod");
     fprintf(stderr," modfiles//vecevent.mod");
@@ -52,6 +56,7 @@ void modl_reg(){
   _Ca_HVA_reg();
   _Ca_LVA_reg();
   _Ih_reg();
+  _ikca_reg();
   _Im_reg();
   _Im_v2_reg();
   _Kd_reg();
@@ -64,6 +69,7 @@ void modl_reg(){
   _NaTa_reg();
   _NaTs_reg();
   _NaV_reg();
+  _sahp_reg();
   _SK_reg();
   _spikeout_reg();
   _vecevent_reg();

@@ -18,17 +18,9 @@
       {
         "node_types_file": "$NETWORK_DIR/LUT_node_types.csv",
         "nodes_file": "$NETWORK_DIR/LUT_nodes.h5"
-      },
-      {
-        "nodes_file": "$NETWORK_DIR/INPUT_nodes.h5",
-        "node_types_file": "$NETWORK_DIR/INPUT_node_types.csv"
       }
     ],
     "edges": [
-      {
-        "edge_types_file": "$NETWORK_DIR/INPUT_LUT_edge_types.csv",
-        "edges_file": "$NETWORK_DIR/INPUT_LUT_edges.h5"
-      },
       {
         "edges_file": "$NETWORK_DIR/LUT_LUT_edges.h5",
         "edge_types_file": "$NETWORK_DIR/LUT_LUT_edge_types.csv"

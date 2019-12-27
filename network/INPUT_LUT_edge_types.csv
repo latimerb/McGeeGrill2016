@@ -1,2 +1,2 @@
-edge_type_id target_query source_query model_template delay distance_range dynamics_params target_sections syn_weight
-100 pop_name=='PUDaff' pop_name=='PUD_aff_virt' Exp2Syn 2.0 "[0.0, 300.0]" AMPA_ExcToExc.json ['somatic'] 0.06
+edge_type_id target_query source_query delay model_template target_sections syn_weight distance_range dynamics_params
+100 pop_name=='SPN' pop_name=='Pel_aff_virt' 0.5 Exp2Syn ['somatic'] 0.06 "[0.0, 300.0]" AMPA_ExcToExc.json

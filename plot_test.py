@@ -20,41 +20,52 @@ numSPN      = 1
 
 config_file = "simulation_config.json"
 v_file = "./output/cell_vars.h5"
-
-# Plot spike raster ---------------------------------------
+s_file = "PUD_spikes.h5"
 
 df = pd.read_csv("output/spikes.csv",delimiter=' ')
 rast = df.values
 
 
 i = h5py.File(v_file,'r')
-
 mem_pot = i['report']['LUT']['data']
+
+
+tsim = 24000
 
 #print("Rin = {}".format((mem_pot[6000,0]-mem_pot[4000,0])/0.1))
 #val = mem_pot[4000,0]+0.632*(mem_pot[6000,0]-mem_pot[4000,0])
 #ind = find_nearest(mem_pot[:,0],val)
 #print("tau = {}".format(np.arange(0,1000,1/10)[ind]-500))
 plt.figure()
-plt.subplot(4,1,1)
-plt.plot(np.arange(0,1000,1/10),mem_pot[:,0])
-plt.title('PUD')
-plt.subplot(4,1,2)
-plt.plot(np.arange(0,1000,1/10),mem_pot[:,1])
+plt.subplot(6,1,1)
+plt.plot(np.arange(0,tsim,1/10),mem_pot[:,0])
 plt.title('Pel')
-plt.subplot(4,1,3)
-plt.plot(np.arange(0,1000,1/10),mem_pot[:,2])
+plt.subplot(6,1,2)
+plt.plot(np.arange(0,tsim,1/10),mem_pot[:,1])
+plt.title('PUD')
+plt.subplot(6,1,3)
+plt.plot(np.arange(0,tsim,1/10),mem_pot[:,2])
 plt.title('INm+')
-plt.subplot(4,1,4)
-plt.plot(np.arange(0,1000,1/10),mem_pot[:,3])
+plt.subplot(6,1,4)
+plt.plot(np.arange(0,tsim,1/10),mem_pot[:,3])
 plt.title('INm-')
+plt.subplot(6,1,5)
+plt.plot(np.arange(0,tsim,1/10),mem_pot[:,4])
+plt.title('IND')
+plt.subplot(6,1,6)
+plt.plot(np.arange(0,tsim,1/10),mem_pot[:,5])
+plt.title('FB')
 
+plt.figure()
+plt.plot(np.arange(0,tsim,1/10),mem_pot[:,6])
+plt.title('SPN')
 
-labels_string = ['PUD','Pel','INm+','INm-','IND','FB','SPN']
+labels_string = ['Pel','PUD','INm+','INm-','IND','FB','SPN']
+rast = np.delete(rast,1,1)
 fig,ax = plt.subplots()
 for i in np.arange(0,len(labels_string)):
-    rast[rast[:,2]==i,2] = labels_string[i]
-ax.plot(rast[:,0],rast[:,2],'b.')
+    rast[rast[:,1]==i,1] = labels_string[i]
+ax.plot(rast[:,0],rast[:,1],'b.')
 plt.show()
 
 # Plot Bladder afferent, EUS afferent, PAG afferent, IND, and Hypo on one figure
